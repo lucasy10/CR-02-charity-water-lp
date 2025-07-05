@@ -13,7 +13,8 @@
     }
 
     body {
-      font-family: sans-serif;
+      font-family: 'Proxima Nova', Arial, sans-serif;
+      /* Use Proxima Nova for all text, with Arial and sans-serif as fallback */
       color: #222;
     }
 
@@ -48,17 +49,26 @@
     .left-panel {
       background-color: #fecb00;
       flex: 1;
-      padding: 60px 40px;
+      padding: 30px 40px 60px 40px;
+      /* Reduce top padding to move content up */
       display: flex;
       flex-direction: column;
       justify-content: center;
+      /* Center all content horizontally */
+      align-items: center;
     }
 
     .headline {
-      font-size: 48px;
+      font-size: 64px;
+      /* Make the h1 even bigger */
       font-weight: 800;
       margin-bottom: 20px;
       color: #111;
+      margin-top: 0;
+      text-align: center;
+      /* Center the text for a nice look */
+      line-height: 1.1;
+      /* Keep lines close together */
     }
 
     .subtext {
@@ -69,41 +79,46 @@
     .button-group {
       display: flex;
       gap: 0;
-      /* No gap so borders connect seamlessly */
       align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      /* Make the section bigger by adding more space above */
+      margin-bottom: 40px;
+      /* Add space below */
     }
 
     /* Blue box for "Every Drop Counts" */
     .cta-blue-box {
       background-color: #5a8fa4;
       color: #fff;
-      padding: 12px 24px;
-      border-radius: 0;
+      padding: 20px 52px 20px 40px;
+      /* Increase right padding to extend blue box further right */
+      border-radius: 20px 0 0 20px;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 20px;
       display: flex;
       align-items: center;
-      margin-right: 0;
       border: 4px solid #5a8fa4;
       border-right: none;
-      /* No right border so it connects smoothly */
+      margin-right: -16px;
+      /* Overlap the button more for a seamless look */
     }
 
     .btn {
-      padding: 12px 24px;
+      padding: 20px 40px;
       border: 4px solid #5a8fa4;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 20px;
       cursor: pointer;
       text-decoration: none;
-      border-radius: 0;
+      border-radius: 20px;
+      /* All corners rounded */
       border-left: none;
-      /* No left border so it connects smoothly */
-      /* Remove any margin that could cause a gap */
       margin-left: 0;
-      /* To fix any possible gap caused by inline-block spacing */
       display: flex;
       align-items: center;
+      margin-left: -4px;
+      /* Add negative left margin to overlap the blue box border for seamless look */
     }
 
     .btn.primary {
@@ -138,6 +153,27 @@
       display: block;
     }
 
+    /* Simple styles for the story section */
+    .story-section {
+      background: #fffbe6;
+      /* light yellow background */
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 30px;
+      margin-top: 10px;
+    }
+
+    .story-title {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .story-text {
+      font-size: 16px;
+      color: #333;
+    }
+
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
@@ -164,10 +200,23 @@
   </div>
   <div class="container">
     <div class="left-panel">
-      <h1 class="headline">Make Your Activism Flow Further</h1>
+      <h1 class="headline">
+        Make Your<br>
+        Activism Flow<br>
+        Further
+      </h1>
       <p class="subtext">
         100% of your donation funds clean water projects. Track exactly where your money goes and see the change you made.
       </p>
+      <!-- Story section starts here -->
+      <div class="story-section">
+        <!-- This is a simple story section for beginners -->
+        <h2 class="story-title">Our Story</h2>
+        <p class="story-text">
+          charity: water began with a simple mission: to bring clean and safe drinking water to people in need. Every project is made possible by generous supporters like you. Together, we can make a difference, one drop at a time.
+        </p>
+      </div>
+      <!-- Story section ends here -->
       <!-- Call to action area with blue box and yellow button -->
       <div class="button-group">
         <!-- Blue box with text on the left -->
