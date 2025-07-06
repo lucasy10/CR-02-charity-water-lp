@@ -50,29 +50,29 @@
       background-color: #fecb00;
       flex: 1;
       padding: 30px 40px 60px 40px;
-      /* Reduce top padding to move content up */
       display: flex;
       flex-direction: column;
       justify-content: center;
-      /* Center all content horizontally */
-      align-items: center;
+      /* Remove horizontal centering so content aligns left */
+      align-items: flex-start;
     }
 
     .headline {
-      font-size: 64px;
-      /* Make the h1 even bigger */
+      font-size: 70px;
       font-weight: 800;
       margin-bottom: 20px;
       color: #111;
       margin-top: 0;
-      text-align: center;
-      /* Center the text for a nice look */
+      text-align: left;
       line-height: 1.1;
-      /* Keep lines close together */
+      /* Remove any extra centering */
+      width: 100%;
+      /* Make sure h1 uses full width for left alignment */
     }
 
     .subtext {
-      font-size: 16px;
+      font-size: 22px;
+      /* Make the text under h1 bigger */
       margin-bottom: 30px;
     }
 
@@ -81,6 +81,9 @@
       gap: 0;
       align-items: center;
       justify-content: center;
+      /* This centers the group inside the left-panel */
+      width: 100%;
+      /* Make the group take full width so justify-content works */
       margin-top: 40px;
       /* Make the section bigger by adding more space above */
       margin-bottom: 40px;
@@ -124,6 +127,15 @@
     .btn.primary {
       background-color: #fecb00;
       color: #111;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* Add a simple hover effect for the CTA button */
+    .btn.primary:hover {
+      background-color: #ffd900;
+      /* Slightly lighter yellow on hover */
+      color: #222;
+      /* Slightly darker text on hover */
     }
 
     .btn.secondary {
@@ -155,8 +167,8 @@
 
     /* Simple styles for the story section */
     .story-section {
-      background: #fffbe6;
-      /* light yellow background */
+      background: #fff7e1;
+      /* teal background for the story section */
       border-radius: 6px;
       padding: 20px;
       margin-bottom: 30px;
